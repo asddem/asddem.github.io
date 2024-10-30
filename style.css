@@ -1,27 +1,33 @@
-body {
-    background: #f9b7c1;
-    display: flex;
-    justify-content: center;
-    }
-  
-  #alice-container {
-    width: 90vh;
-    display: grid;
-    place-items: center;
-    grid-template-areas:
-      ". . a1"
-      ". a2 ."
-      "a3 . .";
+html, body {
+    margin: 0;
   }
   
-  #alice1 {
-    grid-area: a1;
+  html {
+    font-family: sans-serif;
+    height: 100%;
   }
   
-  #alice2 {
-    grid-area: a2;
+  body {
+    overflow: hidden;
+    height: inherit;
   }
   
-  #alice3 {
-    grid-area: a3;
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    position: absolute;
+    margin: 0;
+    top: -4px;
+    right: 5px;
+  
+    color: transparent;
+    text-shadow: 0 0 4px white;
+  }
+  
+  p {
+    position: absolute;
+    margin: 0;
+    top: 35px;
+    right: 5px;
+    color: #aaa;
   }
