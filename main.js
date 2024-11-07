@@ -60,31 +60,31 @@ const processImage = document.getElementById('process-image');
 
 async function findTreasureWithAsyncAwait() {
   try {
-    document.getElementById('game-message').textContent = "寻宝进度：寻找第一个线索...";
+    setTimeout(() => { document.getElementById('game-message').textContent = '寻宝进度：寻找第一个线索...'; }, 500);
     processImage.src = 'images/1.jpg';
     const clue = await TreasureMap.getInitialClue();
     console.log(clue);
-    document.getElementById('game-message').textContent = "寻宝进度：解码线索...";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：解码线索..."; }, 500);
     processImage.src = 'images/6.jpg';
     const location = await TreasureMap.decodeAncientScript(clue);
     console.log(location);
-    document.getElementById('game-message').textContent = "寻宝进度：前往神庙...";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：前往神庙..."; }, 500);
     processImage.src = 'images/2.jpg';
     const box = await TreasureMap.searchTemple(location);
     console.log(box);
-    document.getElementById('game-message').textContent = "寻宝进度：遇到魔法迷宫...";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：遇到魔法迷宫..."; }, 500);
     processImage.src = 'images/5.jpg';
     const mazeMessage = await TreasureMap.encounterMagicMaze();
     console.log(mazeMessage);
-    document.getElementById('game-message').textContent = "寻宝进度：发现宝箱...";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：发现宝箱..."; }, 500);
     processImage.src = 'images/3.jpg';
     const exitMaze = await TreasureMap.exitMagicMaze();
     console.log(exitMaze);
-    document.getElementById('game-message').textContent = "寻宝进度：找到宝藏...";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：找到宝藏..."; }, 500);
     processImage.src = 'images/4.jpg';
     const treasure = await TreasureMap.openTreasureBox();
     console.log(treasure);
-    document.getElementById('game-message').textContent = "寻宝进度：宝藏找到！";
+    setTimeout(() => {document.getElementById('game-message').textContent = "寻宝进度：宝藏找到！"; }, 500);
   } catch (error) {
     console.error("任务失败:", error);
     document.getElementById('game-message').textContent = "寻宝进度：任务失败！";
